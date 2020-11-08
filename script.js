@@ -7,17 +7,19 @@ var secondsLeft
 
 $("button").on("click", function(button) {
 
+console.log('button', button.target.innerHTML);
+$(".controls").text(button.target.innerHTML);
+
 
 // THEN a timer starts
-function setTime() {
-    var timerInterval = setInterval(function() {
-      secondsLeft--;
-      timeEl.textContent = secondsLeft + " seconds left till colorsplosion.";
-
-      if(secondsLeft === 0) {
+var secondsleft = 120
+var timerInterval = setInterval(function() {
+    if(secondsLeft <= 0) {
         clearInterval(timerInterval);
-        sendMessage();
-      }
+    }
+    document.getElementById("progressBar").value = 120 - secondsLeft;
+    secondsLeft -= 1;
+    }, 1000);
 // and I am presented with a question
 
 // WHEN I answer a question
@@ -28,3 +30,6 @@ function setTime() {
 // THEN the game is over
 // WHEN the game is over
 // THEN I can save my initials and score
+
+
+// this is the code that executes
