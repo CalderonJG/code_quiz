@@ -5,9 +5,10 @@ var secondsLeft
 // GIVEN I am taking a code quiz
 // WHEN I click the start button
 
+$("button").on("click", function(button) {
 
-// THEN a timer starts and I am presented with a question
 
+// THEN a timer starts
 function setTime() {
     var timerInterval = setInterval(function() {
       secondsLeft--;
@@ -17,6 +18,7 @@ function setTime() {
         clearInterval(timerInterval);
         sendMessage();
       }
+// and I am presented with a question
 
 // WHEN I answer a question
 // THEN I am presented with another question
