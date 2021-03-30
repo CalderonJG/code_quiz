@@ -6,4 +6,4 @@ If a question answered incorrectly, time is subtracted from the clock.
 Once all questions are answered or the time reaches 0, the game is over.
 When the game is over, you can save your score and log your initials.
 
-Deployed application URL: https://calderonjg.github.io/code_quiz/y
+Deployed application URL: https://calderonjg.github.io/code_quiz/
